@@ -63,7 +63,7 @@
             <h1 class="hero-title">
                 Эффективные решения для вашего бизнеса
             </h1>
-            <button class="hero-btn action-btn" type="button">
+            <button data-modal-open class="hero-btn action-btn" type="button">
                 Заказать услугу
             </button>
             </div>
@@ -136,15 +136,18 @@
                         <img src="./images/whatwedo/img.jpg"
                             alt="Разработчик компании вводит код для серверной части сайта с клавиатуры" width="370"
                             height="294" />
+                            <div class="image-cover">Десктопные приложения</div>
                     </li>
                     <li class="abilities-item">
                         <img src="./images/whatwedo/img-1.jpg"
                             alt="Сотрудник компании создает макет интерфейса сайта адаптивный для мобильных устройств"
                             width="370" height="294" />
+                            <div class="image-cover">Мобильные приложения</div>
                     </li>
                     <li  class="clients-item">
                         <img src="./images/whatwedo/img-2.jpg"
                             alt="Дизайнер компании подбирает цвет на палитре планшета" width="370" height="294" />
+                            <div class="image-cover">Дизайнерские решения</div>
                     </li>
                 </ul>
             </div>
@@ -437,6 +440,20 @@
         </div>
 </div>
     </footer>
+    <!-- =========Модальное окно======== -->
+    
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button data-modal-close type="button" class="close-button-wrap">
+                <svg class="close-button" width="18px" height="18px">
+                    <use href="./images/sprite.svg#icon-close-black-18dp-2-1"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <!-- ========== Java scripts  ======== -->
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
