@@ -146,6 +146,7 @@ img {
 
 .list-item:not(:last-child) {
   margin-right: 50px;
+  position: relative;
 }
 
 .nav-link {
@@ -188,7 +189,7 @@ img {
   margin-right: 50px;
 }
 
-/*.current::after {
+/*.current {
   content: "";
   position: absolute;
   display: block;
@@ -322,7 +323,9 @@ img {
   /* ==============КОНЕЦ ПРЕИМУЩЕСТВА=============== */
 
   /* ==============ЧЕМ ЗАНИМАЕТСЯ КОМПАНИЯ=============== */
-
+  .image {
+    position: relative;
+  }
   .image-cover {
     position: absolute;
     bottom: 0;
