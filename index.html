@@ -25,7 +25,7 @@
                 <a class="logo" lang="en" href="./index.html">Web<span class="logo-header-part">Studio</span></a>
                 <ul class="list">
                     <li class="list-item">
-                        <a class="nav-link link action current" href="./index.html">Студия</a>
+                        <a class="nav-link link action  current" href="./index.html">Студия</a>
                     </li>
                     <li class="list-item">
                         <a class="nav-link link action" href="./portfolio.html">Портфолио</a>
@@ -63,11 +63,23 @@
             <h1 class="hero-title">
                 Эффективные решения для вашего бизнеса
             </h1>
-            <button data-modal-open class="hero-btn action-btn" type="button">
+            <button  class="hero-btn action-btn" type="button" data-modal-open>
                 Заказать услугу
             </button>
             </div>
         </section>
+
+        <!-- =========Модальное окно======== -->
+        
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button  type="button" class="close-button-wrap" data-modal-close>
+                    <svg  class="close-button" width="18px" height="18px">
+                        <use href="./images/sprite.svg#icon-close-black-18dp-2-1"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
 
         <!--Секция преимущества компании-->
         <section class="advantages">
@@ -144,9 +156,10 @@
                             width="370" height="294" />
                             <div class="image-cover">Мобильные приложения</div>
                     </li>
-                    <li  class="clients-item">
+                    <li  class="abilities-item">
                         <img class="image" src="./images/whatwedo/img-2.jpg"
-                            alt="Дизайнер компании подбирает цвет на палитре планшета" width="370" height="294" />
+                            alt="Дизайнер компании подбирает цвет на палитре планшета" 
+                            width="370" height="294" />
                             <div class="image-cover">Дизайнерские решения</div>
                     </li>
                 </ul>
@@ -440,18 +453,7 @@
         </div>
 </div>
     </footer>
-    <!-- =========Модальное окно======== -->
-    
-    <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-            <button data-modal-close type="button" class="close-button-wrap">
-                <svg class="close-button" width="18px" height="18px">
-                    <use href="./images/sprite.svg#icon-close-black-18dp-2-1"></use>
-                </svg>
-            </button>
-        </div>
-    </div>
-    
+     
     <!-- ========== Java scripts  ======== -->
     <script src="./js/modal.js"></script>
 </body>
