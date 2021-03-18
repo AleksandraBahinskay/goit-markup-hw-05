@@ -38,6 +38,9 @@
   /* Рамка карточек проектов в портфолио */
   --project-border-color: #eeeeee;
   --white: #ffffff;
+  
+  /*Анимация*/
+ --cub: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -125,7 +128,11 @@ img {
 }
 
 .action {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--cub);
+}
+
+.auth-icon {
+ transition: fill 250ms var(--cub);
 }
 
 .action:hover,
@@ -183,7 +190,11 @@ img {
   letter-spacing: 0.02em;
   display: flex;
   align-items: center;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms var(--cub) ;
+}
+
+svg {
+  transition: fill 250ms var(--cub) ;
 }
 
 .auth-icon {
@@ -261,7 +272,7 @@ img {
 
 
 .action-btn {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--cub) ;
 }
 
   .action-btn:hover,
@@ -454,8 +465,13 @@ img {
     border-radius: 50%;
     background-color: transparent;
     fill: #afb1b8;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms var(--cub) ;
   }
+
+  .social-list-icon {
+  transition: fill 250ms var(--cub) ;
+  }
+
   .social-list-link:hover .social-list-icon,
   .social-list-link:focus .social-list-icon {
     fill: var(--white);
@@ -491,6 +507,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: border 250ms var(--cub) ;
   }
   .items:not(:last-child) {
     margin-right: 30px;
@@ -498,11 +515,12 @@ img {
 
   .partner-logo {
     fill: #afb1b8;
+    transition: fill 250ms var(--cub) ;
   }
 
-.partners-link {
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  .partners-link {
+   transition: fill 250ms var(--cub) ;
+  }
 
   .partners-link:hover .partner-logo {
     fill: var(--action-color);
@@ -525,7 +543,7 @@ img {
     /*transition-property: color, background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 250ms var(--cub) ;
   }
 
   .filter-btn:hover,
@@ -599,12 +617,13 @@ img {
     padding: 20px 24px;
     border: 1px solid #eeeeee;
     border-top: none;
-    transition-property: box-shadow;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .projects-item-thumb:hover {
+  .projects-list-item {
+    transition: box-shadow 250ms var(--cub) ;
+  }
+
+  .projects-list-item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
@@ -664,11 +683,13 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: all 250ms var(--cub) ;
   }
   
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+    
 }
 
   .close-button-wrap {
@@ -790,6 +811,10 @@ img {
   fill: var(--white);
 }
 
+.social-list-icon {
+  transition: fill 250ms var(--cub) ;
+}
+
 .footer-social-list-link:hover .social-list-icon,
 .footer-social-list-link:focus .social-list-icon {
   fill: var(--white);
@@ -812,6 +837,6 @@ img {
   /*transition-property: box-shadow, background, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--cub) ;
 }
 /* КОНЕЦ ПОДВАЛА */
